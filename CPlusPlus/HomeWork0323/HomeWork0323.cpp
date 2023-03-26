@@ -254,7 +254,7 @@ int main()
 	TrueFalse = NewNumber >= 0;
 
 	// 포인터연산자
-	int* TestPtr = NewNumber * ResultPtr;
+	int* TestPtr = NewNumber*ResultPtr;
 	__int64 Address = NewNumber & ResultPtr;
 	
 	// 배열연산자
