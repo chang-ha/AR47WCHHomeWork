@@ -1,20 +1,189 @@
-﻿// HomeWork0327.cpp : 이 파일에는 'main' 함수가 포함됩니다. 거기서 프로그램 실행이 시작되고 종료됩니다.
-//
+﻿#include <iostream>
+#include <conio.h>
+#include <Windows.h>
 
-#include <iostream>
+class int2
+{
+public:
+	int X;
+	int Y;
+
+public:
+	int2 Half()
+	{
+		return { X / 2, Y / 2 };
+	}
+
+public:
+	int2(int _X, int _Y)
+		: X(_X), Y(_Y)
+	{
+
+	}
+};
+
+class ConsoleGameScreen
+{
+public:
+	static const int ScreenYSize = 5;
+	static const int ScreenXSize = 5;
+
+	static int2 GetScreenSize()
+	{
+		return int2{ ScreenXSize, ScreenYSize };
+	}
+
+	void ScreenClear()
+	{
+		for (size_t y = 0; y < ScreenYSize; y++)
+		{
+			for (size_t x = 0; x < ScreenXSize; x++)
+			{
+				Arr[y][x] = 'a';
+			}
+		}
+	}
+
+	void ScreenPrint() const
+	{
+		for (size_t y = 0; y < ScreenYSize; y++)
+		{
+			for (size_t x = 0; x < ScreenXSize; x++)
+			{
+				printf_s("%c", Arr[y][x]);
+			}
+			printf_s("\n");
+		}
+	}
+
+	static bool IsScreenOver(const int2& _Pos)
+	{
+		if (0 > _Pos.X)
+		{
+			return true;
+		}
+
+		if (0 > _Pos.Y)
+		{
+			return true;
+		}
+
+		if (ScreenXSize <= _Pos.X)
+		{
+			return true;
+		}
+
+		if (ScreenYSize <= _Pos.Y)
+		{
+			return true;
+		}
+
+		return false;
+	}
+
+	void SetScreenCharacter(const int2& _Pos, char _Ch)
+	{
+		if (true == IsScreenOver(_Pos))
+		{
+			return;
+		}
+		Arr[_Pos.Y][_Pos.X] = _Ch;
+	}
+private:
+	char Arr[ScreenYSize][ScreenXSize] = { 0, };
+};
+
+class Player
+{
+public:
+	int2 GetPos() const
+	{
+		return Pos;
+	}
+
+	void SetPos(const int2& _Value)
+	{
+		Pos = _Value;
+	}
+
+	void Input()
+	{
+		if (0 == _kbhit())
+		{
+			Sleep(InterFrame);
+			return;
+		}
+
+		char Ch = _getch();
+		switch (Ch)
+		{
+		case 'a':
+		case 'A':
+			Pos.X -= 1;
+			if (true == ConsoleGameScreen::IsScreenOver(Pos))
+			{
+				Pos.X += 1;
+			}
+			break;
+		case 'd':
+		case 'D':
+			Pos.X += 1;
+			if (true == ConsoleGameScreen::IsScreenOver(Pos))
+			{
+				Pos.X -= 1;
+			}
+			break;
+		case 'w':
+		case 'W':
+			Pos.Y -= 1;
+			if (true == ConsoleGameScreen::IsScreenOver(Pos))
+			{
+				Pos.Y += 1;
+			}
+			break;
+		case 's':
+		case 'S':
+			Pos.Y += 1;
+			if (true == ConsoleGameScreen::IsScreenOver(Pos))
+			{
+				Pos.Y -= 1;
+			}
+			break;
+		default:
+			break;
+		}
+		Sleep(InterFrame);
+	}
+protected:
+
+private:
+	static const int InterFrame = 200;
+	int2 Pos = int2(0, 0);
+};
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	ConsoleGameScreen NewScreen;
+	Player NewPlayer;
+
+	int2 ScreenSize = NewScreen.GetScreenSize();
+	NewPlayer.SetPos(ScreenSize.Half());
+
+	while (true)
+	{
+		system("cls");
+
+		NewScreen.ScreenClear();
+
+		NewScreen.SetScreenCharacter(NewPlayer.GetPos(), '*');
+
+		NewScreen.ScreenPrint();
+
+		NewPlayer.Input();
+	}
+	// 게임의 프레임워크와 동일하다
+	// 이제부터 내부에서 객체들이 활동하는 것
+
+
+
 }
-
-// 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
-// 프로그램 디버그: <F5> 키 또는 [디버그] > [디버깅 시작] 메뉴
-
-// 시작을 위한 팁: 
-//   1. [솔루션 탐색기] 창을 사용하여 파일을 추가/관리합니다.
-//   2. [팀 탐색기] 창을 사용하여 소스 제어에 연결합니다.
-//   3. [출력] 창을 사용하여 빌드 출력 및 기타 메시지를 확인합니다.
-//   4. [오류 목록] 창을 사용하여 오류를 봅니다.
-//   5. [프로젝트] > [새 항목 추가]로 이동하여 새 코드 파일을 만들거나, [프로젝트] > [기존 항목 추가]로 이동하여 기존 코드 파일을 프로젝트에 추가합니다.
-//   6. 나중에 이 프로젝트를 다시 열려면 [파일] > [열기] > [프로젝트]로 이동하고 .sln 파일을 선택합니다.
