@@ -28,7 +28,7 @@ inline int Bullet::GetYPos() const
 	return Pos.Y;
 }
 
-bool Bullet::IsFire()
+bool Bullet::IsFire() const
 {
 	return Fire;
 }

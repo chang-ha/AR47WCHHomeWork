@@ -14,7 +14,7 @@ public:
 
 	inline int GetYPos() const;
 
-	bool IsFire();
+	bool IsFire() const ;
 
 	void SetFire(const bool _Fire);
 
