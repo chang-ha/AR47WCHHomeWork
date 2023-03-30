@@ -7,8 +7,8 @@ class ConsoleGameScreen
 {
 public:
 	// 클래스 내부에 전역변수를 선언할수가 있습니다.
-	static const int ScreenYSize = 20;
-	static const int ScreenXSize = 7;
+	static const int ScreenYSize = 5;
+	static const int ScreenXSize = 5;
 
 	static ConsoleGameScreen& GetMainScreen()
 	{
