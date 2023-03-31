@@ -52,7 +52,7 @@ void Monster::Render()
 	}
 	else if (false == Dead)
 	{
-		ConsoleGameScreen::GetMainScreen().SetScreenCharacter(Pos, 'O');
+		ConsoleGameScreen::GetMainScreen().SetScreenCharacter(Pos, 'M');
 	}
 }
 
