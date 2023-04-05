@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include "Bullet.h"
 
+
 int main()
 {
 	for (int i = 0; i < Bullet::ArrBulletCount; i++)

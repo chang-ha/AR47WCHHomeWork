@@ -9,7 +9,6 @@
 #include "ConsoleGameScreen.h"
 
 Player ShootingGame::NewPlayer;
-Monster* MonsterArr = Monster::GetArrMonster();
 
 void ShootingGame::Loading()
 {
@@ -27,6 +26,7 @@ void ShootingGame::Loading()
 void ShootingGame::Collision()
 {
 	Bullet* BulletArr = Bullet::GetArrBullet();
+	Monster* MonsterArr = Monster::GetArrMonster();
 
 	for (size_t BulletIndex = 0; BulletIndex < Bullet::ArrBulletCount; BulletIndex++)
 	{
@@ -56,6 +56,28 @@ void ShootingGame::Collision()
 	}
 }
 
+void ShootingGame::PlayerDeathCehck()
+{
+	Monster* MonsterArr = Monster::GetArrMonster();
+
+	for (size_t MonsterIndex = 0; MonsterIndex < Monster::ArrMonsterCount; MonsterIndex++)
+	{
+		Monster& CurMonster = MonsterArr[MonsterIndex];
+		if (CurMonster.GetPos() == NewPlayer.GetPos())
+		{
+			printf_s("---You Die---\n");
+			printf_s("Press Any Key\n");
+			char Ch = _getch();
+			switch (Ch)
+			{
+			default:
+				GameProgress();
+				break;
+			}
+		}
+	}
+}
+
 void ShootingGame::MonsterMove()
 {
 	Monster::GetArrMonster()->MoveRightLeft();
@@ -78,7 +100,7 @@ void ShootingGame::GameUpdate()
 
 		MonsterMove();
 		Collision();
-
+		PlayerDeathCehck();
 		ConsoleGameScreen::GetMainScreen().ScreenPrint();
 
 		NewPlayer.Input();
