@@ -41,6 +41,7 @@ public:
 
 	void Resize(size_t _Value)
 	{
+		// 숙제 1, 2.
 		DataType* OldPtr = nullptr;
 
 		OldPtr = ArrPtr;
@@ -68,7 +69,7 @@ public:
 		// ArrCount = _Other.ArrCount;
 		// ArrPtr = _Other.ArrPtr;
 
-		// 최초 에러발생 원인
+		// 숙제 3. 에러발생 원인
 		// Array0의 ArrPtr은 100번지, Array1의 ArrPtr은 200번지라고 가정하면
 		// 수정하기전 operator=를 사용하면
 		// Array0의 ArrPtr은 100번지, Array1의 ArrPtr은 100번지로 동일한 주소를 가리키고 있음
@@ -77,6 +78,8 @@ public:
 		// 그 다음에 Array0의 소멸자가 호출되면서 Array0의 ArrPtr이 가리키고 있는 100번지를 삭제하려고 할 떄
 		// 이미 100번지는 delete[]가 되어있기 때문에 "메모리 크러쉬"가 발생한다.
 		
+		
+		// 숙제 3, 4.
 		if (nullptr != ArrPtr)
 		{
 			delete[] ArrPtr;
