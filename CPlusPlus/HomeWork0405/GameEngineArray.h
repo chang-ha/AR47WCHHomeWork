@@ -66,6 +66,7 @@ public:
 
 	GameEngineArray& operator=(const GameEngineArray& _Other)
 	{
+		// ¾èÀº º¹»ç
 		// ArrCount = _Other.ArrCount;
 		// ArrPtr = _Other.ArrPtr;
 

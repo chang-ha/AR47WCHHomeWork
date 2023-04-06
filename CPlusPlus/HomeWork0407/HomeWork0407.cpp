@@ -1,4 +1,8 @@
-﻿#include <GameEngineBase/GameEngineDebug.h>
+﻿// HomeWork0407
+
+
+#include <iostream>
+#include <GameEngineBase/GameEngineDebug.h>
 #include <GameEngineConsole/ConsoleGameScreen.h>
 
 int main()
@@ -8,5 +12,6 @@ int main()
 		ConsoleGameScreen::GetMainScreen().ScreenClear();
 		ConsoleGameScreen::GetMainScreen().ScreenPrint();
 		Sleep(500);
+
 	}
 }
