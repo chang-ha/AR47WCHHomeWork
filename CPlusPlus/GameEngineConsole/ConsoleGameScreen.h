@@ -2,21 +2,15 @@
 #include "ConsoleGameMath.h"
 #include "GameEngineArray.h"
 
-// 이게 1단계
-// 근본오브 근본 수학 물리 
 class ConsoleGameScreen
 {
 public:
-	// 클래스 내부에 전역변수를 선언할수가 있습니다.
-	static const int ScreenYSize = 10;
-	static const int ScreenXSize = 20;
-
 	static ConsoleGameScreen& GetMainScreen()
 	{
 		return MainScreen;
 	}
 
-	static int2 GetScreenSize();
+	int2 GetScreenSize();
 
 	void ScreenClear();
 
@@ -26,14 +20,19 @@ public:
 
 	void SetScreenCharacter(const int2& _Pos, char _Ch);
 
+	void SetScreenSize(int2 _Size);
 protected:
 
 private:
-	char Arr[ScreenYSize][ScreenXSize] = { 0, };
 
-	GameEngineArray<GameEngineArray<char>> ArrScreen;
+	char** ArrScreen;
+
+	int2 Size;
+	// char의 배열을 가진 또 다른 배열
+	// GameEngineArray<GameEngineArray<char>> ScreenArr; // == char** ScreenArr;
 
 	ConsoleGameScreen();
+	~ConsoleGameScreen();
 
 	static ConsoleGameScreen MainScreen;
 };

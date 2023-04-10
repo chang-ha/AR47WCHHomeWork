@@ -139,15 +139,34 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ConsoleGameArray.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="ConsoleGameMath.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="ConsoleGameScreen.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="Practice.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GameEngineBase\GameEngineBase.vcxproj">
-      <Project>{3f3ba569-1d51-455d-9828-f253f721d98a}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\GameEngineConsole\GameEngineConsole.vcxproj">
-      <Project>{54f54e96-7554-4928-8977-b0d8768f4513}</Project>
-    </ProjectReference>
+    <ClInclude Include="Base.h" />
+    <ClInclude Include="ConsoleGameArray.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="ConsoleGameMath.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="ConsoleGameScreen.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

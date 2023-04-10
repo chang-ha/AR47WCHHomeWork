@@ -2,5 +2,23 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="Practice.cpp" />
+    <ClCompile Include="ConsoleGameMath.cpp">
+      <Filter>Level0</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleGameScreen.cpp" />
+    <ClCompile Include="ConsoleGameArray.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Level0">
+      <UniqueIdentifier>{f8c99f6c-3375-477c-94f6-dd84377d41e9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ConsoleGameMath.h">
+      <Filter>Level0</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleGameScreen.h" />
+    <ClInclude Include="ConsoleGameArray.h" />
+    <ClInclude Include="Base.h" />
   </ItemGroup>
 </Project>
