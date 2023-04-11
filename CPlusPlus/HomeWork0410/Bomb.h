@@ -22,6 +22,8 @@ protected:
 	void Render() override; 
 
 private:
-	int BombCount = 10;
+	int BombCount = 0;
+	int Power = 3;
+	int step = 1;
 };
 

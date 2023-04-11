@@ -24,15 +24,12 @@ public:
 protected:
 
 private:
-
 	char** ArrScreen;
-
 	int2 Size;
+	static ConsoleGameScreen MainScreen;
 	// char의 배열을 가진 또 다른 배열
 	// GameEngineArray<GameEngineArray<char>> ScreenArr; // == char** ScreenArr;
 
 	ConsoleGameScreen();
 	~ConsoleGameScreen();
-
-	static ConsoleGameScreen MainScreen;
 };
