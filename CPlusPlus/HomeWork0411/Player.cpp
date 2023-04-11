@@ -5,7 +5,6 @@
 #include "ConsoleObjectManager.h"
 #include "Bomb.h"
 #include "GameEnum.h"
-#include "ConsoleObjectManager.h"
 
 bool Player::IsGameUpdate = true;
 
@@ -13,7 +12,6 @@ Player::Player()
 {
 	RenderChar = '*';
 	SetPos(ConsoleGameScreen::GetMainScreen().GetScreenSize().Half());
-
 }
 
 bool Player::IsBomb(int2 _NextPos)
