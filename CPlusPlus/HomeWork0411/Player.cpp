@@ -14,7 +14,7 @@ Player::Player()
 	SetPos(ConsoleGameScreen::GetMainScreen().GetScreenSize().Half());
 }
 
-bool Player::IsBomb(int2 _NextPos)
+bool Player::IsBomb(int2 _NextPos) const
 {
 	GameEngineArray<ConsoleGameObject*>& BombGroup 
 		= ConsoleObjectManager::GetGroup(ObjectOrder::Bomb);
