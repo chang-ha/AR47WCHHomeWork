@@ -25,10 +25,6 @@ void Bomb::Update()
 void Bomb::Render()
 {
 	ConsoleGameObject::Render();
-	if (false == IsUpdate())
-	{
-		return;
-	}
 
 	if (5 < BombCount)
 	{
@@ -36,7 +32,6 @@ void Bomb::Render()
 		{
 			ConsoleGameScreen::GetMainScreen().SetScreenCharacter({ Pos.X - i, Pos.Y }, RenderChar);
 			ConsoleGameScreen::GetMainScreen().SetScreenCharacter({ Pos.X + i, Pos.Y }, RenderChar);
-			ConsoleGameScreen::GetMainScreen().SetScreenCharacter({ Pos.X, Pos.Y }, RenderChar);
 			ConsoleGameScreen::GetMainScreen().SetScreenCharacter({ Pos.X, Pos.Y - i }, RenderChar);
 			ConsoleGameScreen::GetMainScreen().SetScreenCharacter({ Pos.X, Pos.Y + i }, RenderChar);
 		}
