@@ -1,7 +1,6 @@
 #pragma once
 #include "ConsoleGameMath.h"
 
-// Screen에서 움직이는 오브젝트들의 기본기능을 제공한다.
 class ConsoleGameObject
 {
 public:

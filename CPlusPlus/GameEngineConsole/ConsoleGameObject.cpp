@@ -1,7 +1,7 @@
 #include "ConsoleGameObject.h"
 #include "ConsoleGameScreen.h"
 
-void ConsoleGameObject::Render()
+void ConsoleGameObject::Render() 
 {
 	if (false == IsUpdate())
 	{
