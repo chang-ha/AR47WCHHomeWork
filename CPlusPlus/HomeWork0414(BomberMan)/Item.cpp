@@ -3,6 +3,7 @@
 #include <GameEngineBase/GameEngineRandom.h>
 #include <GameEngineConsole/ConsoleObjectManager.h>
 #include "GameEnum.h"
+#include "Player.h"
 
 
 Item::Item()
@@ -20,4 +21,5 @@ Item::~Item()
 
 void Item::Update()
 {
+	
 }

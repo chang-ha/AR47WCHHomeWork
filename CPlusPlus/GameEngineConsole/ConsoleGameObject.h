@@ -2,6 +2,7 @@
 #include "ConsoleGameMath.h"
 
 // Screen에서 움직이는 오브젝트들의 기본기능을 제공한다.
+class Parts;
 class ConsoleGameObject
 {
 public:
@@ -20,7 +21,7 @@ public:
 		return DeathValue;
 	}
 
-	void Death()
+	virtual void Death()
 	{
 		DeathValue = true;
 	}
@@ -43,6 +44,10 @@ public:
 	virtual void Update();
 	virtual void Render();
 
+	virtual bool IsPlayerEat();
+
+	
+
 protected:
 	int2 Pos;
 	char RenderChar = ' ';
@@ -50,6 +55,5 @@ protected:
 private:
 	bool UpdateValue = true;
 	bool DeathValue = false;
-
 };
 

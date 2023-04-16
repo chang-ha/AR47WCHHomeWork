@@ -54,7 +54,7 @@ void Player::EatItem()
 		int2 CurItemPos = CurItem->GetPos();
 		if (GetPos() == CurItemPos)
 		{
-			Player::BombPower += 1;
+			BombPower += 1;
 			CurItem->Death();
 		}
 	}

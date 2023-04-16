@@ -1,4 +1,4 @@
-﻿// HomeWork0414(BomberMan)
+﻿// HomeWork0414(SnackGame)
 
 
 #include <iostream>
@@ -6,24 +6,22 @@
 #include <GameEngineConsole/ConsoleGameScreen.h>
 #include <GameEngineConsole/ConsoleGameObject.h>
 #include <conio.h>
-#include "Player.h"
-#include "Bomb.h"
-#include "GameEnum.h"
 #include <GameEngineConsole/ConsoleObjectManager.h>
 #include <GameEngineBase/GameEngineRandom.h>
-#include "Item.h"
 
+#include "Head.h"
+#include "GameEnum.h"
+#include "Body.h"
 int main()
 {
 	GameEngineDebug::LeckCheck();
-	int2 ScreenSize = { 10, 5 };
+	int2 ScreenSize = { 7, 5 };
 	ConsoleGameScreen::GetMainScreen().SetScreenSize(ScreenSize);
+	ConsoleObjectManager::CreateConsoleObject<Head>(ObjectOrder::Head);
+	ConsoleObjectManager::CreateConsoleObject<Body>(ObjectOrder::Body);
 
-	ConsoleObjectManager::CreateConsoleObject<Player>(ObjectOrder::Player);
-	ConsoleObjectManager::CreateConsoleObject<Item>(ObjectOrder::Item);
-	ConsoleObjectManager::CreateConsoleObject<Item>(ObjectOrder::Item);
 
-	while (Player::IsGameUpdate)
+	while (true == Head::IsPlay)
 	{
 		ConsoleObjectManager::ConsoleAllObjectUpdate();
 		ConsoleObjectManager::ConsoleAllObjectRender();
@@ -32,5 +30,4 @@ int main()
 		Sleep(200);
 	}
 	ConsoleObjectManager::ConsoleAllObjectDelete();
-
 }

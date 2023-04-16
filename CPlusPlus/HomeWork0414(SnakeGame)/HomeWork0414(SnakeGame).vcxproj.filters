@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="HomeWork0414(SnakeGame).cpp" />
+    <ClCompile Include="Body.cpp" />
+    <ClCompile Include="Head.cpp" />
+    <ClCompile Include="Parts.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Body.h" />
+    <ClInclude Include="GameEnum.h" />
+    <ClInclude Include="Head.h" />
+    <ClInclude Include="Parts.h" />
+  </ItemGroup>
+</Project>

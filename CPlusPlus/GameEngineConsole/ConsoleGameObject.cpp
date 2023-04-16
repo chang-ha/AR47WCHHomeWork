@@ -12,3 +12,8 @@ void ConsoleGameObject::Render()
 }
 
 void ConsoleGameObject::Update() {}
+
+bool ConsoleGameObject::IsPlayerEat()
+{
+	return false;
+}

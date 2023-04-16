@@ -10,19 +10,8 @@ private:
 	static std::vector<std::list<ConsoleGameObject*>> AllObject;
 public:
 	template<typename ObjectType>
-	// Order는 그룹의 순서
-	// 몬스터 그룹이 있다.
-	// 플레이어 그룹이 있다.
-	// 폭탄 그룹이 있다.
 	static ObjectType* CreateConsoleObject(int _Order)
 	{
-		// ObjectType* NewObject = new ObjectType();
-
-		// AllObject의 자료형은 GameEngineArray<ConsoleGameObject*>
-
-		// &안붙이면 완전히 새로운 GameEngineArray가 생성됨
-		// AllObject는 처음에 비어있는 배열
-		// 0번 그룹을 만들어서 넣기 위해서 AllObject배열의 크기를 늘려야함
 		if (_Order >= AllObject.size())
 		{
 			AllObject.resize(_Order + 1);
