@@ -6,7 +6,7 @@ class Parts;
 class ConsoleGameObject
 {
 public:
-	inline void SetPos(const int2& _Value)
+	virtual inline void SetPos(const int2& _Value)
 	{
 		Pos = _Value;
 	}

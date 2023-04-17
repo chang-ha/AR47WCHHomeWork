@@ -8,6 +8,7 @@ public:
 	static const int2 Right;
 	static const int2 Up;
 	static const int2 Down;
+	static const int2 Zero;
 
 public:
 	int X = 0;
