@@ -1,12 +1,12 @@
-﻿// HomeWork0414
-//
+﻿// HomeWork0418
+
 
 #include <iostream>
-#include <GameEngineBase/GameEngineDebug.h>
-#include <GameEngineBase/GameEngineRandom.h>
-#include <GameEngineConsole/ConsoleGameScreen.h>
-#include <GameEngineConsole/ConsoleGameObject.h>
-#include <GameEngineConsole/ConsoleObjectManager.h>
+#include "GameEngineDebug.h"
+#include "GameEngineRandom.h"
+#include "ConsoleGameScreen.h"
+#include "ConsoleGameObject.h"
+#include "ConsoleObjectManager.h"
 #include "Head.h"
 #include "Body.h"
 #include "GameEnum.h"
@@ -20,8 +20,8 @@ int main()
 	ConsoleGameScreen::GetMainScreen().SetScreenSize(ScreenSize);
 
 	ConsoleObjectManager::CreateConsoleObject<Head>(SnakeGameOrder::Head);
-	ConsoleObjectManager::CreateConsoleObject<Body>(SnakeGameOrder::Body);
 
+	ConsoleObjectManager::CreateConsoleObject<Body>(SnakeGameOrder::Body);
 	while (true == Head::IsPlay)
 	{
 		ConsoleObjectManager::ConsoleAllObjectUpdate();
