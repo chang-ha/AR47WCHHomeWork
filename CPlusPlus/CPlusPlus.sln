@@ -99,6 +99,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeWork0418", "HomeWork041
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeWork0418(RememberPrevRender)", "HomeWork0418(RememberPrevRender)\HomeWork0418(RememberPrevRender).vcxproj", "{FF31FAAA-62A0-4BBD-A730-B28265BE1F5D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeWork0418(String)", "HomeWork0418(String)\HomeWork0418(String).vcxproj", "{3B262EBE-130A-41B4-870B-355055DC308D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -355,6 +357,14 @@ Global
 		{FF31FAAA-62A0-4BBD-A730-B28265BE1F5D}.Release|x64.Build.0 = Release|x64
 		{FF31FAAA-62A0-4BBD-A730-B28265BE1F5D}.Release|x86.ActiveCfg = Release|Win32
 		{FF31FAAA-62A0-4BBD-A730-B28265BE1F5D}.Release|x86.Build.0 = Release|Win32
+		{3B262EBE-130A-41B4-870B-355055DC308D}.Debug|x64.ActiveCfg = Debug|x64
+		{3B262EBE-130A-41B4-870B-355055DC308D}.Debug|x64.Build.0 = Debug|x64
+		{3B262EBE-130A-41B4-870B-355055DC308D}.Debug|x86.ActiveCfg = Debug|Win32
+		{3B262EBE-130A-41B4-870B-355055DC308D}.Debug|x86.Build.0 = Debug|Win32
+		{3B262EBE-130A-41B4-870B-355055DC308D}.Release|x64.ActiveCfg = Release|x64
+		{3B262EBE-130A-41B4-870B-355055DC308D}.Release|x64.Build.0 = Release|x64
+		{3B262EBE-130A-41B4-870B-355055DC308D}.Release|x86.ActiveCfg = Release|Win32
+		{3B262EBE-130A-41B4-870B-355055DC308D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -390,6 +400,7 @@ Global
 		{F4B25001-84FB-43BD-954E-920C70DDDF65} = {DC67A811-75EE-48A5-9395-E012742379BB}
 		{5604B141-33C5-4BF1-8C01-7F876AF8761D} = {58A57D0E-4167-435A-A354-8C22F651C02F}
 		{FF31FAAA-62A0-4BBD-A730-B28265BE1F5D} = {58A57D0E-4167-435A-A354-8C22F651C02F}
+		{3B262EBE-130A-41B4-870B-355055DC308D} = {58A57D0E-4167-435A-A354-8C22F651C02F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D1EB51B1-6BD5-4AE2-B4BA-3516A2C3202D}
