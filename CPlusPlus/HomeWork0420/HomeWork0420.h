@@ -214,7 +214,7 @@ public:
 		{
 			// --연산자 << 내 이전 노드를 가리켜야함
 			// 내 이전 노드는??? 내 LeftChild의 MaxNode()
-			// 만약 LeftChild << nullptr이면??? 부모쪽으로 올라가야함
+			// 만약 LeftChild == nullptr이면??? 부모쪽으로 올라가야함
 			Node = Node->PrevNode();
 			return *this;
 		}
